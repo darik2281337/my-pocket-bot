@@ -4,7 +4,7 @@ from pocketoptionapi_async.exceptions import ConnectionError
 
 SSID = '42["auth",{"sessionToken":"40527f1167b31e5240fc7c2b174589ce","uid":"115265714","lang":"ru","currentUrl":"cabinet/demo-quick-high-low","isChart":1}]'
 
-client = AsyncPocketOptionClient(SSID, demo=True)  
+client = AsyncPocketOptionClient(SSID)  
 
 async def main():
     try:
@@ -15,6 +15,7 @@ async def main():
         print("Ошибка подключения:", e)
 
 asyncio.run(main())
+
 
 
 
